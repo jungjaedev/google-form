@@ -6,6 +6,7 @@ import Box from '@material-ui/core/Box';
 
 import Header from './Header';
 import Body from './Body';
+import Menubar from './Menubar';
 
 function Structure(props) {
   const { classes } = props;
@@ -13,6 +14,7 @@ function Structure(props) {
     <Box className={classes.root}>
       <Header />
       <Body />
+      <Menubar />
     </Box>
   );
 }

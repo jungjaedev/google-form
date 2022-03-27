@@ -7,7 +7,7 @@ import Box from '@material-ui/core/Box';
 import Title from 'Components/Title';
 import Description from 'Components/Description';
 
-function Structure(props) {
+function Header(props) {
   const { classes } = props;
   return (
     <Box className={classes.root}>
@@ -18,7 +18,7 @@ function Structure(props) {
 }
 
 const componentStyle = withStyles(theme => ({
-  root: theme.styles.Default.Structure.page,
+  root: theme.styles.Default.Box.root,
 }));
 
-export default withTheme(componentStyle(Structure));
+export default withTheme(componentStyle(Header));

@@ -10,30 +10,21 @@ export const Structure = {
     alignContent: 'flex-start',
   },
 
-  header: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    height: '10vh',
-    width: '100%',
-    alignItems: 'center',
-    background: ColorThemes.lightBlue,
-    zIndex: '10',
-  },
+  // header: {
+  //   display: 'flex',
+  //   flexWrap: 'wrap',
+  //   height: '10vh',
+  //   width: '100%',
+  //   alignItems: 'center',
+  //   background: ColorThemes.lightBlue,
+  //   zIndex: '10',
+  // },
 
-  body: {
-    display: 'flex',
-    flexWrap: 'noWrap',
-    height: '80vh',
-    width: '100%',
-    background: ColorThemes.white,
-  },
-
-  footer: {
-    display: 'flex',
-    marginTop: 'auto',
-    bottom: 0,
-    height: '10vh',
-    width: '100%',
-    background: ColorThemes.lightBlue,
-  },
+  // body: {
+  //   display: 'flex',
+  //   flexWrap: 'noWrap',
+  //   height: '80vh',
+  //   width: '100%',
+  //   background: ColorThemes.white,
+  // },
 };

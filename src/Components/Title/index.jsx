@@ -3,12 +3,13 @@ import React from 'react';
 import { withStyles } from '@material-ui/styles';
 import { withTheme } from '@material-ui/styles';
 import Box from '@material-ui/core/Box';
+import { TextField } from '@material-ui/core';
 
 function Title(props) {
   const { classes } = props;
   return (
     <Box className={classes.root}>
-      <span>hi</span>
+      <TextField required id="standard-required" defaultValue="제목 없는 설문지" />
     </Box>
   );
 }
