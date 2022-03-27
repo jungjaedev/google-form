@@ -4,8 +4,8 @@ import { withStyles } from '@material-ui/styles';
 import { withTheme } from '@material-ui/styles';
 import Box from '@material-ui/core/Box';
 
-import Title from 'Components/Title';
-import Description from 'Components/Description';
+import Title from 'Components/TitleDesc/Title';
+import Description from 'Components/TitleDesc/Description';
 
 function Header(props) {
   const { classes } = props;
