@@ -15,7 +15,6 @@ function Title(props) {
           className: classes.title,
         }}
         required
-        id="standard-required"
         defaultValue="제목 없는 설문지"
       />
     </Box>

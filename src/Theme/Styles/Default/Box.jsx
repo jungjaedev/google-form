@@ -23,4 +23,19 @@ export const Box = {
     backgroundColor: 'black',
     borderLeft: `8px solid ${ColorThemes.blue}`,
   },
+  row: {
+    display: 'flex',
+    height: 40,
+    padding: '8px 0',
+    alignItems: 'center',
+    width: '100%',
+  },
+  radioBox: {
+    width: 30,
+    height: 'auto',
+  },
+  textBox: {
+    width: '90%',
+    height: 'auto',
+  },
 };

@@ -12,6 +12,9 @@ function Question(props) {
     <Box className={classes.question}>
       <QuestionHeader />
       <MultipleChoice />
+      <MultipleChoice />
+      <MultipleChoice />
+      <MultipleChoice />
     </Box>
   );
 }

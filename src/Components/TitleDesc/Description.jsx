@@ -12,7 +12,7 @@ function Description(props) {
       <TextField
         className={classes.textfield}
         InputProps={{
-          className: classes.description,
+          className: classes.smallFont,
         }}
         id="standard-textarea"
         placeholder="설문지 설명"
@@ -25,7 +25,7 @@ function Description(props) {
 const componentStyle = withStyles(theme => ({
   root: theme.styles.Default.Box.root,
   textfield: theme.styles.Default.TextField.root,
-  description: theme.styles.Default.TextField.description,
+  smallFont: theme.styles.Default.TextField.smallFont,
 }));
 
 export default withTheme(componentStyle(Description));
