@@ -9,7 +9,7 @@ import MultipleChoice from './QuestionTypes/MultipleChoice';
 function Question(props) {
   const { classes } = props;
   return (
-    <Box className={classes.root}>
+    <Box className={classes.question}>
       <QuestionHeader />
       <MultipleChoice />
     </Box>
@@ -17,7 +17,7 @@ function Question(props) {
 }
 
 const componentStyle = withStyles(theme => ({
-  root: theme.styles.Default.Box.root,
+  question: theme.styles.Default.Box.question,
 }));
 
 export default withTheme(componentStyle(Question));

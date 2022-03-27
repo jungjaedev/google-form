@@ -8,6 +8,7 @@ export const Structure = {
     height: '100vh',
     justifyContent: 'space-around',
     alignContent: 'flex-start',
+
     backgroundColor: ColorThemes.background,
   },
 

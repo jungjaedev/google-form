@@ -11,7 +11,7 @@ function QuestionHeader(props) {
   return (
     <Box className={classes.root}>
       <Grid item xs={8}>
-        <TextField required id="filled-required" placeholder="질문" variant="filled" />
+        <TextField className={classes.textfield} required placeholder="질문" variant="filled" />
       </Grid>
       <Grid item xs={4}>
         Dropdown
@@ -22,6 +22,7 @@ function QuestionHeader(props) {
 
 const componentStyle = withStyles(theme => ({
   root: theme.styles.Default.Box.root,
+  textfield: theme.styles.Default.TextField.root,
 }));
 
 export default withTheme(componentStyle(QuestionHeader));

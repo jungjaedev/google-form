@@ -6,12 +6,12 @@ export const TextField = {
     flexWrap: 'wrap',
     width: '100%',
     height: 'auto',
-    '& .MuiInput-underline:after': {
-      borderBottomColor: `${ColorThemes.purple}`,
-    },
-    '& .MuiInput-underline:before': {
-      borderBottomColor: `${ColorThemes.gray}`,
-    },
+    // '& .MuiInput-underline:after': {
+    //   borderBottomColor: `${ColorThemes.purple}`,
+    // },
+    // '& .MuiInput-underline:before': {
+    //   borderBottomColor: `${ColorThemes.gray}`,
+    // },
   },
   title: {
     fontSize: 32,
