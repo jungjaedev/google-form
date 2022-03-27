@@ -1,11 +1,7 @@
 export const ColorThemes = {
-  lightBlue: '#ECEFF4',
-  red: '#E50D06',
-  darkgrey: '#333333',
-  grey: '#4B4B4B',
-  midgrey: '#979797',
-  lightgrey: '#EDEDED',
-  disabled: '#D8D8D8',
+  purple: '#673ab7',
   white: '#FFFFFF',
-  background: '#EEEEEE',
+  background: '#ede7f6',
+  blue: '#4285f4',
+  gray: '#e0d1d1',
 };

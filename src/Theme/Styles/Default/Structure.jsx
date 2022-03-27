@@ -8,17 +8,21 @@ export const Structure = {
     height: '100vh',
     justifyContent: 'space-around',
     alignContent: 'flex-start',
+    backgroundColor: ColorThemes.background,
   },
 
-  // header: {
-  //   display: 'flex',
-  //   flexWrap: 'wrap',
-  //   height: '10vh',
-  //   width: '100%',
-  //   alignItems: 'center',
-  //   background: ColorThemes.lightBlue,
-  //   zIndex: '10',
-  // },
+  header: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    height: 'auto',
+    width: '80%',
+    alignItems: 'center',
+    marginTop: '20px',
+    padding: '22px 20px 24px 20px',
+    backgroundColor: ColorThemes.white,
+    borderRadius: '8px',
+    borderTop: `10px solid ${ColorThemes.purple}`,
+  },
 
   // body: {
   //   display: 'flex',

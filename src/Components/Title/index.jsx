@@ -9,13 +9,23 @@ function Title(props) {
   const { classes } = props;
   return (
     <Box className={classes.root}>
-      <TextField required id="standard-required" defaultValue="제목 없는 설문지" />
+      <TextField
+        className={classes.textfield}
+        InputProps={{
+          className: classes.title,
+        }}
+        required
+        id="standard-required"
+        defaultValue="제목 없는 설문지"
+      />
     </Box>
   );
 }
 
 const componentStyle = withStyles(theme => ({
   root: theme.styles.Default.Box.root,
+  textfield: theme.styles.Default.TextField.root,
+  title: theme.styles.Default.TextField.title,
 }));
 
 export default withTheme(componentStyle(Title));

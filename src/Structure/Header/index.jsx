@@ -10,7 +10,7 @@ import Description from 'Components/Description';
 function Header(props) {
   const { classes } = props;
   return (
-    <Box className={classes.root}>
+    <Box className={`${classes.header} ${classes.selectedBox}`}>
       <Title />
       <Description />
     </Box>
@@ -18,7 +18,8 @@ function Header(props) {
 }
 
 const componentStyle = withStyles(theme => ({
-  root: theme.styles.Default.Box.root,
+  selectedBox: theme.styles.Default.Box.selectedBox,
+  header: theme.styles.Default.Structure.header,
 }));
 
 export default withTheme(componentStyle(Header));
