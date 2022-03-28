@@ -29,21 +29,23 @@ function QuestionBottom(props) {
       <Grid item xs={2}>
         필수
         <Switch
-          disableRipple
+          // disableRipple
           //   root: classes.root,
           // switchBase: classes.switchBase,
           // thumb: classes.thumb,
           // track: classes.track,
           // checked: classes.checked,
-          style={{
-            color: '#673ab7',
-            '&$checked': {
-              color: '#673ab7',
-            },
-            '&$checked + $track': {
-              backgroundColor: '#673ab7',
-            },
-          }}
+          style={
+            {
+              // color: '#fff',
+              // '&$checked': {
+              //   color: '#673ab7',
+              // },
+              // '&$checked + $track': {
+              //   backgroundColor: '#673ab7',
+              // },
+            }
+          }
         />
       </Grid>
     </Box>

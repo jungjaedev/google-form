@@ -5,7 +5,7 @@ import { withTheme } from '@material-ui/styles';
 import Box from '@material-ui/core/Box';
 import TextField from '@material-ui/core/TextField';
 
-function ShortAnswer(props) {
+function LongAnswer(props) {
   const { classes } = props;
   return (
     <Box className={classes.row}>
@@ -18,4 +18,4 @@ const componentStyle = withStyles(theme => ({
   row: theme.styles.Default.Box.row,
 }));
 
-export default withTheme(componentStyle(ShortAnswer));
+export default withTheme(componentStyle(LongAnswer));

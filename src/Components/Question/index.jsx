@@ -7,15 +7,16 @@ import Divider from '@material-ui/core/Divider';
 
 import QuestionHeader from './QuestionHeader';
 import QuestionBottom from './QuestionBottom';
-import MultipleChoice from './QuestionTypes/MultipleChoice';
+// import MultipleChoice from './QuestionTypes/MultipleChoice';
 // import ShortAnswer from './QuestionTypes/ShortAnswer';
+import LongAnswer from './QuestionTypes/LongAnswer';
 
 function Question(props) {
   const { classes } = props;
   return (
     <Box className={classes.question}>
       <QuestionHeader />
-      <MultipleChoice />
+      <LongAnswer />
       <Divider style={{ marginTop: 30, width: '100%' }} />
       <QuestionBottom />
     </Box>
