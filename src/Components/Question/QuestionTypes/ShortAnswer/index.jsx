@@ -6,7 +6,7 @@ import Box from '@material-ui/core/Box';
 
 function ShortAnswer(props) {
   const { classes } = props;
-  return <Box className={classes.question}>shortAnswer</Box>;
+  return <Box className={classes.question}>ShortAnswer</Box>;
 }
 
 const componentStyle = withStyles(theme => ({
