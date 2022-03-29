@@ -8,13 +8,26 @@ import IconButton from '@material-ui/core/IconButton';
 
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 
-import { menubarOffsetTop } from 'Data/manager';
+import { menubarOffsetTop, questionList, updateQuestionListAction } from 'Data/manager';
 
 function Menubar(props) {
   const { classes } = props;
+  const dispatch = useDispatch();
   const topOffset = useSelector(menubarOffsetTop);
+  const questionArray = useSelector(questionList);
+
+  const addQuestion = () => {
+    let numArray = [];
+    let max = 0;
+    questionArray.map((el, index) => {
+      numArray.push(parseInt(el.slice(8)));
+    });
+    max = Math.max(...numArray) + 1;
+    dispatch(updateQuestionListAction(`Question${max}`));
+  };
   return (
     <Box
+      onClick={() => addQuestion()}
       className={classes.root}
       style={{
         position: 'absolute',

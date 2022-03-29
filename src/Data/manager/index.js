@@ -7,6 +7,7 @@ export const manager = createSlice({
     description: '',
     menubarOffsetTop: 0,
     selectedComponent: '',
+    questionList: [],
   },
   reducers: {
     updateTitleAction: (state, action) => {
@@ -21,14 +22,25 @@ export const manager = createSlice({
     updateSelectedComponentAction: (state, action) => {
       state.selectedComponent = action.payload;
     },
+    updateQuestionListAction: (state, action) => {
+      // state.questionList.push(action.payload);
+      state.questionList = [...state.questionList, action.payload];
+    },
   },
 });
 
-export const { updateTitleAction, updateDescriptionAction, updateMenubarOffsetTopAction, updateSelectedComponentAction } = manager.actions;
+export const {
+  updateTitleAction,
+  updateDescriptionAction,
+  updateMenubarOffsetTopAction,
+  updateSelectedComponentAction,
+  updateQuestionListAction,
+} = manager.actions;
 
 export const title = state => state.manager.title;
 export const description = state => state.manager.description;
 export const menubarOffsetTop = state => state.manager.menubarOffsetTop;
 export const selectedComponent = state => state.manager.selectedComponent;
+export const questionList = state => state.manager.questionList;
 
 export default manager.reducer;

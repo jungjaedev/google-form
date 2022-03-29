@@ -10,7 +10,7 @@ import { menubarOffsetTop, updateMenubarOffsetTopAction, updateSelectedComponent
 
 import QuestionHeader from './QuestionHeader';
 import QuestionBottom from './QuestionBottom';
-// import MultipleChoice from './QuestionTypes/MultipleChoice';
+import MultipleChoice from './QuestionTypes/MultipleChoice';
 // import ShortAnswer from './QuestionTypes/ShortAnswer';
 import LongAnswer from './QuestionTypes/LongAnswer';
 // import CheckBox from './QuestionTypes/CheckBox';
@@ -22,7 +22,7 @@ function Question(props) {
   const currentComponent = useSelector(selectedComponent);
 
   useEffect(() => {
-    const elem = document.querySelector('#current');
+    const elem = document.querySelector(`#${props.id}`);
     if (elem && topOffset === 0) {
       const rect = elem.getBoundingClientRect();
       dispatch(updateMenubarOffsetTopAction(rect.top));
@@ -30,19 +30,19 @@ function Question(props) {
   }, [dispatch]);
 
   const handleClick = e => {
-    let elem = document.querySelector('#current');
+    let elem = document.querySelector(`#${props.id}`);
     let rect = elem.getBoundingClientRect();
     dispatch(updateMenubarOffsetTopAction(rect.top));
-    dispatch(updateSelectedComponentAction('current'));
+    dispatch(updateSelectedComponentAction(props.id));
   };
 
   const checkComponent =
-    currentComponent === 'current' ? `${classes.question} ${classes.selectedBox}` : `${classes.question} ${classes.unSelectedBox}`;
+    currentComponent === props.id ? `${classes.question} ${classes.selectedBox}` : `${classes.question} ${classes.unSelectedBox}`;
 
   return (
-    <Box id="current" onClick={e => handleClick(e)} className={checkComponent}>
+    <Box id={props.id} onClick={e => handleClick(e)} className={checkComponent}>
       <QuestionHeader />
-      <LongAnswer />
+      <MultipleChoice />
       <Divider style={{ marginTop: 30, width: '100%' }} />
       <QuestionBottom />
     </Box>
