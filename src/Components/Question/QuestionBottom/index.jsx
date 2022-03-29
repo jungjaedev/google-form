@@ -1,4 +1,5 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 
 import { withStyles } from '@material-ui/styles';
 import { withTheme } from '@material-ui/styles';
@@ -10,8 +11,17 @@ import Switch from '@material-ui/core/Switch';
 
 import LibraryBooksOutlinedIcon from '@material-ui/icons/LibraryBooksOutlined';
 import DeleteOutlineOutlinedIcon from '@material-ui/icons/DeleteOutlineOutlined';
+
+import { deleteQuestionAction } from 'Data/manager';
+
 function QuestionBottom(props) {
   const { classes } = props;
+  const dispatch = useDispatch();
+
+  const handleDelete = () => {
+    dispatch(deleteQuestionAction(props.id));
+  };
+
   return (
     <Box className={classes.row}>
       <Grid item xs={8}></Grid>
@@ -21,7 +31,7 @@ function QuestionBottom(props) {
         </IconButton>
       </Grid>
       <Grid item xs={1}>
-        <IconButton>
+        <IconButton onClick={() => handleDelete()}>
           <DeleteOutlineOutlinedIcon />
         </IconButton>
       </Grid>

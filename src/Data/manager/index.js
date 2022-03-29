@@ -23,8 +23,10 @@ export const manager = createSlice({
       state.selectedComponent = action.payload;
     },
     updateQuestionListAction: (state, action) => {
-      // state.questionList.push(action.payload);
       state.questionList = [...state.questionList, action.payload];
+    },
+    deleteQuestionAction: (state, action) => {
+      state.questionList = [...state.questionList].filter(el => action.payload !== el);
     },
   },
 });
@@ -35,6 +37,7 @@ export const {
   updateMenubarOffsetTopAction,
   updateSelectedComponentAction,
   updateQuestionListAction,
+  deleteQuestionAction,
 } = manager.actions;
 
 export const title = state => state.manager.title;

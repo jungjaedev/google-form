@@ -44,7 +44,7 @@ function Question(props) {
       <QuestionHeader />
       <MultipleChoice />
       <Divider style={{ marginTop: 30, width: '100%' }} />
-      <QuestionBottom />
+      <QuestionBottom id={props.id} />
     </Box>
   );
 }
