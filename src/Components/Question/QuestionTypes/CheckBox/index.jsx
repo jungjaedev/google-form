@@ -8,7 +8,7 @@ function Checkbox(props) {
   const { classes } = props;
   return (
     <Box className={classes.root}>
-      <span>hi</span>
+      <span>checkbox</span>
     </Box>
   );
 }

@@ -9,7 +9,7 @@ function LongAnswer(props) {
   const { classes } = props;
   return (
     <Box className={classes.row}>
-      <TextField style={{ width: '60%' }} disabled placeholder="단답형 텍스트" />
+      <TextField style={{ width: '60%' }} multiline={true} disabled placeholder="장문형 텍스트" />
     </Box>
   );
 }

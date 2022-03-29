@@ -10,6 +10,7 @@ import QuestionBottom from './QuestionBottom';
 // import MultipleChoice from './QuestionTypes/MultipleChoice';
 // import ShortAnswer from './QuestionTypes/ShortAnswer';
 import LongAnswer from './QuestionTypes/LongAnswer';
+// import CheckBox from './QuestionTypes/CheckBox';
 
 function Question(props) {
   const { classes } = props;

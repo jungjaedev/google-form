@@ -1,12 +1,22 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { withStyles } from '@material-ui/styles';
 import { withTheme } from '@material-ui/styles';
 import Box from '@material-ui/core/Box';
 import { TextField } from '@material-ui/core';
 
+import { title, updateTitleAction } from 'Data/manager';
+
 function Title(props) {
   const { classes } = props;
+  const dispatch = useDispatch();
+  const titleContent = useSelector(title);
+
+  const handleTitle = e => {
+    dispatch(updateTitleAction(e.target.value));
+  };
+
   return (
     <Box className={classes.root}>
       <TextField
@@ -14,8 +24,9 @@ function Title(props) {
         InputProps={{
           className: classes.title,
         }}
+        onChange={e => handleTitle(e)}
+        value={titleContent}
         required
-        defaultValue="제목 없는 설문지"
       />
     </Box>
   );
