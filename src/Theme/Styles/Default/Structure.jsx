@@ -8,7 +8,6 @@ export const Structure = {
     height: '100vh',
     justifyContent: 'space-around',
     alignContent: 'flex-start',
-
     backgroundColor: ColorThemes.background,
   },
 
@@ -18,11 +17,11 @@ export const Structure = {
     height: 'auto',
     width: '80%',
     alignItems: 'center',
-    marginTop: '20px',
+    margin: '20px auto 0',
     padding: '22px 20px 24px 20px',
     backgroundColor: ColorThemes.white,
     borderRadius: '8px',
-    borderTop: `10px solid ${ColorThemes.purple}`,
+    position: 'relative',
   },
 
   // body: {

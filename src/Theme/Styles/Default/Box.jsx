@@ -20,8 +20,20 @@ export const Box = {
     borderLeft: `8px solid ${ColorThemes.white}`,
   },
   selectedBox: {
-    backgroundColor: 'black',
     borderLeft: `8px solid ${ColorThemes.blue}`,
+  },
+  unSelectedBox: {
+    borderLeft: `8px solid ${ColorThemes.white}`,
+  },
+  top: {
+    left: '-8px',
+    top: 0,
+    position: 'absolute',
+    width: `calc(100% + 8px)`,
+    height: `8px`,
+    borderTopRightRadius: '8px',
+    borderTopLeftRadius: '8px',
+    backgroundColor: ColorThemes.purple,
   },
   row: {
     display: 'flex',
